@@ -2,6 +2,24 @@
 
 Collection of utility function for gulp-assembly package...
 
+---
+
+## Usage:
+
+```js
+const config = {
+    dest: '/var/www/dest/assets',
+    alias: {
+        // ...
+    },
+    sourcemaps: {},
+    uglify: {},
+    cssnano: {}
+};
+const utils = $.assemblyUtils(config);
+```
+
+---
 
 ## Option list:
 
@@ -40,3 +58,21 @@ Collection of utility function for gulp-assembly package...
 *   `uglify` -- optional `gulp-uglify` config object.
 
 *   `cssnano` -- optional `gulp-cssnano` config object.
+
+---
+
+## Utils API:
+
+*   `argv` -- [minimist](https://github.com/substack/minimist) results.
+
+*   `src()` -- wrapper for `gulp.src()`.
+
+*   `dest()` -- wrapper for `gulp.dest()`.
+
+*   `isNoJs()` -- is used `-J` console option.
+
+*   `isNoCss()` -- is used `-C` console option.
+
+*   `isNoWatch()` -- is used `-W` console option.
+
+*   `isMinify()` -- is used `--min` console option.
